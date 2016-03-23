@@ -8,7 +8,7 @@ $(document).ready( function() {
 
 
 var apiCall = function() {
-
+  console.log('clicked');
 
 }
 
