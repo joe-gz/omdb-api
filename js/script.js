@@ -13,7 +13,7 @@ var apiCall = function() {
 }
 
 
-var movie = function(response) {
+var appendMovie = function(response) {
   // add code here to append data to the body!
   // $('body').append("<div class = movie-title></div>")
   // $('.movie-title').append("<p>"+response.Title+"</p>")
