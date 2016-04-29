@@ -8,14 +8,19 @@ $(document).ready( function() {
 
 
 var apiCall = function() {
-  console.log('clicked');
+  var searchText = $("#keyword").val();
+  var OMDBurl = "https://www.omdbapi.com/?t="+ searchText;
 
+  var config = {
+    url: OMDBurl,
+    type: "GET",
+    dataType: "json"
+  };
+
+  $.ajax(config)
+    .done(displayResults)
 }
 
-
-var appendMovie = function(response) {
-  // add code here to append data to the body!
-  // $('body').append("<div class = movie-title></div>")
-  // $('.movie-title').append("<p>"+response.Title+"</p>")
-  // $('.movie-title').append("<img src = '"+response.Poster+"'>")
+function displayResults(response){
+ console.log(response);
 }
